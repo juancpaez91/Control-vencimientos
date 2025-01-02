@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: black;
+    font-family: sans-serif;
+    font-weight: bold;
+    background-image: url(https://res.cloudinary.com/sapphiredev/image/upload/v1735734376/jc81difg4qgv1fqm0drx.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    flex-direction: column;
+}
+main{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    flex-direction: column;
+}
+
+#upload-section, #upload-regular-section, #upload-critical-section{
+    backdrop-filter: blur(50px);
+    border-radius: 2rem;
+    padding: 2rem;
+    box-shadow: 0px 8px 24px white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 36rem;
+    width: 100%;
+    margin: 50px 0px 50px 0px;
+}
+
+#icon-file{
+    font-size: 5px;
+    margin-bottom: 25px;
+}
+
+.dropzone-box h2{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.dropzone-area{
+    padding: 1rem;
+    position: relative;
+    margin-top: 1rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px dashed white;
+    border-radius: 1rem;
+    color: white;
+}
+
+.dropzone-area:hover{
+    color: black;
+}
+
+input[type="file"] {
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.dropzone-actions{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid #d3d3d3;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+button{
+    flex-grow: 1;
+    min-height: 2rem;
+    font-size: 1.2rem;
+    border-radius: 0.4rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.cancelUpload{
+    background-color: transparent;
+    border: 1px solid #d3d3d3;
+    color: white;
+}
+.cancelUpload:hover{
+    background-color: red;
+}
+
+.subUpload{
+    background-color: greenyellow;
+    border: 1px solid greenyellow;
+    color: black;
+}
+
+.subUpload:hover{
+    background-color: white;
+}
+
+.upload-data{
+    backdrop-filter: blur(50px);
+    color:white;
+    font-size: larger;
+    font-weight: bold;
+    border-radius: 2rem;
+    padding: 2rem;
+    box-shadow: 0px 8px 24px white;
+}
+
+input[type="number"]{
+    flex-grow: 1;
+    min-height: 2rem;
+    font-size: 1.2rem;
+    border-radius: 0.4rem;
+    padding: 0.5rem 1rem;
+    margin: 10px;
+}
+
+#data-section {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+#data-section h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para los encabezados de la tabla */
+#data-table th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+/* Estilos para las celdas de la tabla */
+#data-table td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+/* Estilos para las filas impares */
+#data-table tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+/* Estilo para las filas al pasar el mouse (hover) */
+#data-table tr:hover {
+    background-color: #ddd;
+}
+
+/* Estilos para la columna editable */
+#data-table td[contenteditable="true"] {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    cursor: text;
+}
+
+/* Estilos para el botón de eliminar */
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.delete-btn:hover {
+    background-color: #e53935;
+}
+
+/* Estilos generales para las celdas del código de producto */
+.upload-data input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* Estilos para el contenedor de la tabla */
+#data-section table {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* Estilo para la barra de desplazamiento */
+#data-table {
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+.export-buttons {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.export-btn {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.export-btn:hover {
+    background-color: #0056b3;
+}

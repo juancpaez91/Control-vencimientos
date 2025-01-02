@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Vencimientos</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Control de Vencimientos</h1>
+    </header>
+    <main>
+
+        <section id="upload-section">
+            <h2>Cargar Archivo</h2>
+            <p>Adjuntar archivo para generar la tabla</p>
+            <div class="dropzone-area">
+                <div class="file-upload-icon">
+                    <img id="icon-file" src="https://res.cloudinary.com/sapphiredev/image/upload/c_scale,w_100/jyevks5tapt7lcsspw6g" alt="" srcset="">
+                </div>
+                <p>Haga click para cargar o arrastre y suelte</p>
+                <input type="file" name= "uploaded-file" required id="upload-file" accept=".csv">
+                <p class="message">No hay Archivos seleccionados</p>
+            </div>
+            <div class="dropzone-actions">
+                <button type="reset" class="cancelUpload">Cancelar</button>
+                <button type="submit" id="submit-btn" class="subUpload">Subir</button>
+            </div>
+        </section>
+
+        <section id="upload-comparative">
+            <article id="upload-critical-section">
+                <h2>Cargar Archivo de Vencimientos Críticos</h2>
+                <input type="file" id="upload-critical" accept=".csv, .xlsx">
+            </article>
+            
+            <article id="upload-regular-section">
+                <h2>Cargar Archivo de Vencimientos Normales</h2>
+                <input type="file" id="upload-regular" accept=".csv, .xlsx">
+            </article>
+        </section>
+
+        <section class="upload-data">
+            <label for="code">Ingrese codigo de artículo</label>
+            <input type="number" name="code" id="product-code">
+            <button type="submit" id="add-btn" class="subUpload">Agregar</button>
+        </section>
+        
+        <section id="data-section">
+            <h2>Datos Cargados</h2>
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Artículo</th>
+                        <th>Stock</th>
+                        <th>Precio Costo</th>
+                        <th>Precio Venta</th>
+                        <th>Precio Sugerido</th>  <!-- Precio Sugerido editable -->
+                        <th>Fecha de Vencimiento</th> <!-- Fecha de Vencimiento editable -->
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+            <div class="export-buttons">
+                <button id="export-critical" class="export-btn">Exportar Críticos</button>
+                <button id="export-normal" class="export-btn">Exportar Normales</button>
+            </div>
+    </main>
+    <script src="scripts/xlsx.full.min.js"></script>
+    <script type="module" src="scripts/main.js"></script>
+</body>
+</html>
